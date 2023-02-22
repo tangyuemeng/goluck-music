@@ -21,8 +21,8 @@
 </view>
 
 <view class="goluck-block-black block-bottom">
-  <text class="font-title font-white" style="position: absolute; top: 2vh; left: 6vw;">体验</text>
-  <text class="font-title font-white" style="position: absolute; top: 7vh; left: 6vw;">课程</text>
+  <text class="font-title font-white" style="position: absolute; top: 1.5vh; left: 6vw;">体验</text>
+  <text class="font-title font-white" style="position: absolute; top: 5.5vh; left: 6vw;">课程</text>
   <image class="home-arrow" src="../../images/arrow.png"></image>
   <text class="font-content font-white" style="position: absolute; top: 15.5vh; left: 5vw;">点击</text>
   <view class="goluck-block-white home-trail">

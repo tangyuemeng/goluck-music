@@ -23,9 +23,10 @@
 
 .book-back{
   position: absolute;
-  width: 16vw;
+  width: 12vw;
+  height: 12vw;
   left: 6vw;
-  top: 8vh;
+  top: 20vh;
 }
 
 .book-center{

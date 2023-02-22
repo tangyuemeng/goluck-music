@@ -1,0 +1,14 @@
+/* pages/mybook/mybook.wxss */
+.mybook-title{
+  position: absolute;
+  top:5vh;
+  left: 5vw;
+}
+
+.mybook-card{
+  position: absolute;
+  width: 80vw;
+  height: 16vh;
+  top: 15vh;
+  left: 10vw;
+}

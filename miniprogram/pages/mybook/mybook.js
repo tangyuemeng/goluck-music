@@ -1,4 +1,4 @@
-// pages/user/user.js
+// pages/mybook/mybook.js
 Page({
 
   /**
@@ -62,11 +62,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-
-  navi_mybook(){
-    wx.navigateTo({
-      url: '../mybook/mybook',
-    })
-  },
+  }
 })

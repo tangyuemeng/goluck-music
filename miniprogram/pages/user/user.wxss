@@ -82,5 +82,5 @@
 .font-card{
   position: absolute;
   left: 12vw;
-  top: 0.8vh;
+  top: 0.4vh;
 }

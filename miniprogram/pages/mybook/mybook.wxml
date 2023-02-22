@@ -1,0 +1,4 @@
+<!--pages/mybook/mybook.wxml-->
+<text class="font-title font-black mybook-title">我的预约</text>
+
+<view class="goluck-block-white mybook-card"></view>

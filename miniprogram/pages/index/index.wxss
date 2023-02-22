@@ -69,19 +69,19 @@
 
 .title-fix{
   position: absolute;
-  top: 2vh;
+  top: 1vh;
   right: 2vh;
 }
 
 .content-fix{
   position: absolute;
-  top: 8vh;
+  top: 6vh;
   right: 2vh;
 }
 
 .class-fix{
   position: absolute;
-  top: 1.5vh;
+  top: 1vh;
   left: 1vh;
 }
 

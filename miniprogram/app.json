@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/book/book",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/mybook/mybook"
   ],
   "window": {
     "backgroundColor": "#A67F55",

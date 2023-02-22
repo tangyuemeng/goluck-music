@@ -14,7 +14,7 @@
 
 <view class="goluck-block-white-untap user-card">
 
-  <view class="goluck-block-black user-mybook" style="border-radius: 20px 55px 0px 20px;">
+  <view class="goluck-block-black user-mybook" style="border-radius: 20px 55px 0px 20px;" bindtap="navi_mybook">
     <view class="bar-circle"></view>
     <text class="font-white font-subtitle font-card">我的预约</text>
   </view>
