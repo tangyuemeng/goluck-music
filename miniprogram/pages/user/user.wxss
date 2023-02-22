@@ -1,0 +1,86 @@
+/* pages/user/user.wxss */
+
+.user-neko{
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  left: 5vw;
+  top:14.6vh;
+}
+
+.user-card{
+  position: absolute;
+  width: 100vw;
+  height: 60vh;
+  top:41vh;
+}
+
+.user-card-black{
+  position: absolute;
+  width: 90vw;
+  height: 20vh;
+  top:31vh;
+  left: 5vw;
+}
+
+.font-usertitle{
+  position: absolute;
+  right: 5vw;
+  top:12vh;
+}
+
+.font-usertile2{
+  position: absolute;
+  right: 5vw;
+  top:18vh;
+}
+
+.user-vip{
+  position: absolute;
+  width: 14vw;
+  height: 14vw;
+  top:1.6vh;
+  left: 2.2vh;
+}
+
+.user-cardtype{
+  position: absolute;
+  top:1.2vh;
+  left: 24vw;
+}
+
+.user-count{
+  position: absolute;
+  top:5.2vh;
+  left: 24vw;
+}
+
+.user-mybook{
+  position: absolute;
+  width: 80vw;
+  height: 14vh;
+  left: 10vw;
+  top: 3vh;
+}
+
+.user-teacher{
+  position: absolute;
+  width: 80vw;
+  height: 14vh;
+  left: 10vw;
+  top: 21vh;
+}
+
+.user-info{
+  position: absolute;
+  width: 80vw;
+  height: 14vh;
+  left: 10vw;
+  top: 39vh;
+}
+
+.font-card{
+  position: absolute;
+  left: 12vw;
+  top: 0.8vh;
+}

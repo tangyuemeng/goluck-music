@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/book/book"
+    "pages/book/book",
+    "pages/user/user"
   ],
   "window": {
     "backgroundColor": "#A67F55",

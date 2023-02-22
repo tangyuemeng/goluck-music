@@ -13,10 +13,10 @@
 
 .home-logo{
   position: absolute;
-  top: 1.2vh;
-  width: 87vw;
-  height: 13vh;
-  left: -1vw;
+  top: -25vw;
+  width: 90vw;
+  height: 90vw;
+  left: -3vw;
 }
 
 .home-block{
@@ -53,10 +53,10 @@
 
 .home-neko{
   position: absolute;
-  width: 80vw;
-  height: 60vh;
-  left: -12vw;
-  top: -7vh;
+  width: 36vw;
+  height: 30vw;
+  left: 1vw;
+  bottom: -1vh;
 }
 
 .home-book{
@@ -104,7 +104,7 @@
 .home-phone{
   position: absolute;
   width: 32vw;
-  height: 18vh;
+  height: 32vw;
   right: -2vh;
-  top: 2vh;
+  top: 4vh;
 }

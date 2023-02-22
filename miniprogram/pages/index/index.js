@@ -14,4 +14,9 @@ Page({
     })
   },
 
+  navi_user(){
+    wx.navigateTo({
+      url: '../user/user',
+    })
+  },
 });

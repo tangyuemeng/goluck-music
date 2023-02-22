@@ -1,0 +1,32 @@
+<!--pages/user/user.wxml-->
+<image class="user-neko" src="../../images/neko.png"></image>
+
+<text class="font-black font-title font-usertitle">Welcome!</text>
+<text class="font-black font-subtitle font-usertile2">->会员帐户</text>
+
+
+<view class="goluck-block-black user-card-black">
+  <image class="user-vip" src="../../images/vip.png"></image>
+  <text class="font-subtitle font-white user-cardtype">会员卡类型</text>
+  <text class="font-content font-white user-count">剩余次数</text>
+</view>
+
+
+<view class="goluck-block-white-untap user-card">
+
+  <view class="goluck-block-black user-mybook" style="border-radius: 20px 55px 0px 20px;">
+    <view class="bar-circle"></view>
+    <text class="font-white font-subtitle font-card">我的预约</text>
+  </view>
+
+  <view class="goluck-block-black user-teacher" style="border-radius: 20px 55px 0px 20px;">
+    <view class="bar-circle"></view>
+    <text class="font-white font-subtitle font-card">教员介绍</text>
+  </view>
+
+  <view class="goluck-block-black user-info" style="border-radius: 20px 55px 0px 20px;">
+    <view class="bar-circle"></view>
+    <text class="font-white font-subtitle font-card">教室信息</text>
+  </view>
+
+</view>
