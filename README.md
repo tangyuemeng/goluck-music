@@ -30,11 +30,11 @@
 -   CloudBase
 
 
-### インフラ
+### Infrastructure
 
 -   Firebase
 
-### その他
+### Other
 
 -   GitHub
 
