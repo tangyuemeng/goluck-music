@@ -1,14 +1,49 @@
-# Goluck Music native miniapp
+# Goluck Music miniapp
+吾乐音乐官方小程序 
+
+
+![image](https:)
+
+<br><br>
+
+
+## 1. Summary
+
+* 22**23
+<br>
+
+<br>
+
+<br><br>
+
+## 2. Techniques
+
+### Frontend
+
+-   WXML(HTML)
+-   WXSS(CSS)
+-   Canva
+-   Figma
+
+### Backend
+
+-   CloudBase
+
+
+### インフラ
+
+-   Firebase
+
+### その他
+
+-   GitHub
+
+<br><br>
 
 
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
 
 ## Developer
 
-YUEMENG TANG
-
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
-
+-   YUEMENG TANG
+-   tangyuemeng@toki.waseda.jp
