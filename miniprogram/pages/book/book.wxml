@@ -1,0 +1,4 @@
+<!--pages/book/book.wxml-->
+<view class="goluck-block-white-untap book-top"></view>
+
+<view class="goluck-block-white-untap book-center"></view>

@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/book/book"
+  ],
+  "window": {
+    "backgroundColor": "#A67F55",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#A67F55",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "sitemapLocation": "sitemap58.json",
+  "style": "v2"
+}

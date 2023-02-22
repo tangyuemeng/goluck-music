@@ -1,0 +1,16 @@
+/* pages/book/book.wxss */
+.book-top{
+  position: absolute;
+  width: 100vw;
+  height: 46vh;
+  left: 0px;
+  top: -8vh;
+}
+
+.book-center{
+  position: absolute;
+  width: 90vw;
+  height: 54vh;
+  left: 5vw;
+  top: 42vh;
+}

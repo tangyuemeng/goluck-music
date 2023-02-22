@@ -1,0 +1,122 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+
+.goluck-block-white{
+  background: #F5F5F5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.goluck-block-white-untap{
+  background: #F5F5F5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.goluck-block-white:active{
+  background-color: #eeeeee;
+  box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.25);
+  transform: translateY(1vw);
+}
+
+.goluck-block-black{
+  background: #0C0C0C;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.goluck-block-black:active{
+  background-color: #2b2b2b;
+  box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.25);
+  transform: translateY(1vw);
+}
+
+.font-title{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 39px;
+  text-align: right;
+  text-transform: capitalize;
+  
+  color: #0C0C0C;
+}
+
+.font-title-white{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 39px;
+  text-align: right;
+  text-transform: capitalize;
+  
+  color: #F5F5F5;
+}
+
+.font-subtitle{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: right;
+  text-transform: capitalize;
+  
+  color: #0C0C0C;
+}
+
+.font-subtitle-white{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: right;
+  text-transform: capitalize;
+  
+  color: #F5F5F5;
+}
+
+.font-content-white{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: right;
+  text-transform: capitalize;
+
+  color: #F5F5F5;
+}
+
+.font-content{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: right;
+  text-transform: capitalize;
+  
+  color: #0C0C0C;
+}
+
+.font-describe-white{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: right;
+  text-transform: capitalize;
+  
+  color: #F5F5F5;
+}
+
+
+page {
+  background-color: #A67F55;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

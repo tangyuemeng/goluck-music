@@ -1,0 +1,32 @@
+
+<view class="top-banner">
+  <image class="home-logo" src="../../images/home-logo.svg"></image>
+</view>
+
+
+<view class="goluck-block-white home-block">
+  <text class="font-title title-fix">课程介绍</text>
+  <text class="font-content content-fix">xxxxx</text>
+  <image class="home-neko" src="../../images/neko.svg"></image>
+</view>
+
+<view class="goluck-block-white small-block-left" bindtap="navi_book">
+  <text class="font-subtitle class-fix">课程预约</text>
+  <image class="home-book" src="../../images/book.svg"></image>
+</view>
+
+<view class="goluck-block-white small-block-right">
+  <text class="font-subtitle class-fix">个人中心</text>
+  <image class="home-book" src="../../images/teacher.svg"></image>
+</view>
+
+<view class="goluck-block-black block-bottom">
+  <text class="font-title-white" style="position: absolute; top: 2vh; left: 6vw;">体验</text>
+  <text class="font-title-white" style="position: absolute; top: 7vh; left: 6vw;">课程</text>
+  <image class="home-arrow" src="../../images/arrow.png"></image>
+  <text class="font-describe-white" style="position: absolute; top: 15.5vh; left: 5vw;">点击</text>
+  <view class="goluck-block-white home-trail">
+    <image class="home-phone" src="../../images/phone.svg"></image>
+  </view>
+</view>
+
