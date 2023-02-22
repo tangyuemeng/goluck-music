@@ -11,6 +11,7 @@
 
 ## 1. Summary
 
+**Fully customized**mini app
 **用户约课,体验.定制化的**小程序.
 <br>
 
