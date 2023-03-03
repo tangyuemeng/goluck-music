@@ -1,4 +1,25 @@
 <!--pages/mybook/mybook.wxml-->
 <text class="font-title font-black mybook-title">我的预约</text>
 
-<view class="goluck-block-white mybook-card"></view>
+<scroll-view scroll-y="true" class="book-list">
+  <view class="goluck-block-white mybook-card">
+    <text class="font-subtitle font-black bar-title">钢琴-大久保</text>
+      <text class="font-content font-black bar-time">18:00-19:30</text>
+      <view class="cancel-btn">
+        <text class="font-white font-subtitle font-cancel">取消</text>
+      </view>
+  </view>
+
+  <view class="goluck-block-white mybook-card">
+    <text class="font-subtitle font-black bar-title">声乐-川口</text>
+      <text class="font-content font-black bar-time">18:00-19:30</text>
+      <text class="font-content font-black bar-teacher">xx老师</text>
+      <view class="cancel-btn">
+        <text class="font-white font-subtitle font-cancel">取消</text>
+      </view>
+  </view>
+
+
+</scroll-view>
+
+<image class="book-back" src="../../images/back.svg" bindtap="backhome"></image>

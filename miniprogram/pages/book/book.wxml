@@ -1,6 +1,6 @@
 <!--pages/book/book.wxml-->
 <view class="goluck-block-white-untap book-top">
-  <image class="book-back" src="../../images/back.svg"></image>
+  <image class="book-back" src="../../images/back.svg" bindtap="backhome"></image>
   <image class="book-neko" src="../../images/neko.png"></image>
   <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
     <view class="goluck-block-black bar-top" wx:for="{{arr}}">
@@ -17,6 +17,17 @@
       <view class="bar-circle"></view>
       <text class="font-subtitle font-white bar-title">钢琴</text>
       <text class="font-content font-white bar-time">18:00-19:30</text>
+      <text class="font-content font-white bar-teacher">xx老师</text>
+      <view class="btn-white bar-btn">
+        <text class="font-content font-btn">预约</text>
+      </view>
+    </view>
+
+
+    <view class="goluck-block-black bar-center">
+      <view class="bar-circle"></view>
+      <text class="font-subtitle font-white bar-title">声乐</text>
+      <text class="font-content font-white bar-time">20:00-21:30</text>
       <text class="font-content font-white bar-teacher">xx老师</text>
       <view class="btn-white bar-btn">
         <text class="font-content font-btn">预约</text>

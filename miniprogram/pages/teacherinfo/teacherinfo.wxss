@@ -1,0 +1,16 @@
+/* teacherinfo/teacherinfo.wxss */
+
+.teacherinfo-title{
+  position: absolute;
+  top: 7vh;
+  left: 5vw;
+}
+
+.base-bar{
+  position: absolute;
+  width: 95vw;
+  height: 72vh;
+  top: 16vh;
+  left: 5vw;
+  border-radius: 20px 0px 0px 20px;
+}

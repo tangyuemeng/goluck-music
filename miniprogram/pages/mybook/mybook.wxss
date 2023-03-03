@@ -1,14 +1,67 @@
 /* pages/mybook/mybook.wxss */
 .mybook-title{
   position: absolute;
-  top:5vh;
+  top:7vh;
   left: 5vw;
 }
 
-.mybook-card{
+.book-list{
   position: absolute;
   width: 80vw;
-  height: 16vh;
-  top: 15vh;
+  height: 70vh;
+  top: 20vh;
   left: 10vw;
 }
+
+.mybook-card{
+  position: relative;
+  width: 80vw;
+  height: 12vh;
+  margin-bottom: 3vh;
+}
+
+.bar-title{
+  position: absolute;
+  top: 0.5vh;
+  left: 2vw;
+}
+
+.bar-time{
+  position: absolute;
+  top: 4vh;
+  left: 2vw;
+}
+
+.bar-teacher{
+  position: absolute;
+  bottom: 0.5vh;
+  left: 2vw;
+}
+
+.cancel-btn{
+  position: absolute;
+  top: 1vh;
+  width: 16vw;
+  height: 10vh;
+  right: 2vw;
+  background: #0C0C0C;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.font-cancel{
+  position: absolute;
+  top: 2.2vh;
+  left: 1.5vw;
+}
+
+.book-back{
+  position: absolute;
+  width: 14vw;
+  height: 14vw;
+  top: 85vh;
+  left: 6vw;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+

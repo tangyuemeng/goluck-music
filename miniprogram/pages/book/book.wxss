@@ -61,6 +61,7 @@
 }
 
 .bar-center{
+  position: relative;
   width: 85vw;
   height: 16vh;
   margin-bottom: 3vh;
@@ -83,7 +84,7 @@
   top: 50%;
   left: 50%;
   margin-top: -2vw;
-  margin-left: -5.8vw;
+  margin-left: -5vw;
 }
 
 
@@ -115,6 +116,6 @@
 
 .font-btn{
   position: absolute;
-  top: 1vw;
-  left: 5vw;
+  top: 1vh;
+  left: 6vw;
 }

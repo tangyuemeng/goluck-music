@@ -84,3 +84,11 @@
   left: 12vw;
   top: 0.4vh;
 }
+
+.user-back{
+  position: absolute;
+  width: 12vw;
+  height: 12vw;
+  top: 8vh;
+  left: 6vw;
+}

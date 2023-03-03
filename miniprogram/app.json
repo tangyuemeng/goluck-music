@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/book/book",
     "pages/user/user",
-    "pages/mybook/mybook"
+    "pages/mybook/mybook",
+    "pages/teacherinfo/teacherinfo"
   ],
   "window": {
     "backgroundColor": "#A67F55",

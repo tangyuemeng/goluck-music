@@ -58,4 +58,10 @@ Page({
     })
   },
 
+  backhome(){
+    wx.navigateBack({
+      delta:1
+    })
+  },
+
 })
