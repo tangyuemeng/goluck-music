@@ -3,7 +3,7 @@
   <image class="book-back" src="../../images/back.svg" bindtap="backhome"></image>
   <image class="book-neko" src="../../images/neko.png"></image>
   <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
-    <view class="goluck-block-black bar-top" wx:for="{{arr}}">
+    <view class="goluck-block-black bar-top" wx:for="{{arr}}" bindtap="tabSelect" data-id="{{item.id}}">
       <text class="font-content font-white book-day">{{item.day}}</text>
       <text class="font-content font-white book-date">{{item.month}}-{{item.date}}</text>
     </view>
@@ -13,26 +13,20 @@
 <view class="goluck-block-white-untap book-center">
   <text class="font-title book-title">Timeline</text>
   <scroll-view class="scroll-view" scroll-y="true">
-    <view class="goluck-block-black bar-center">
+  
+    <view class="goluck-block-black bar-center" wx:for="{{classlist}}">
       <view class="bar-circle"></view>
-      <text class="font-subtitle font-white bar-title">钢琴</text>
-      <text class="font-content font-white bar-time">18:00-19:30</text>
-      <text class="font-content font-white bar-teacher">xx老师</text>
+      <text class="font-subtitle font-white bar-title">{{item.classname}}</text>
+      <text class="font-content font-white bar-time">{{item.time}}</text>
+      <text class="font-content font-white bar-teacher">{{item.teacher}}</text>
       <view class="btn-white bar-btn">
-        <text class="font-content font-btn">预约</text>
+        <text class="font-content font-btn" wx:if="{{isbook}}">预约</text>
+      </view>
+      <view class="btn-white bar-btn" wx:if="{{!isbook}}">
+        <text class="font-content font-btn" style="left: 4vw;">已满员</text>
       </view>
     </view>
 
-
-    <view class="goluck-block-black bar-center">
-      <view class="bar-circle"></view>
-      <text class="font-subtitle font-white bar-title">声乐</text>
-      <text class="font-content font-white bar-time">20:00-21:30</text>
-      <text class="font-content font-white bar-teacher">xx老师</text>
-      <view class="btn-white bar-btn">
-        <text class="font-content font-btn">预约</text>
-      </view>
-    </view>
    
   </scroll-view>
 </view>

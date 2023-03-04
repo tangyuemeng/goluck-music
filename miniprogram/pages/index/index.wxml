@@ -6,7 +6,12 @@
 
 <view class="goluck-block-white home-block">
   <text class="font-title font-black title-fix">课程介绍</text>
-  <text class="font-content font-black content-fix">xxxxx</text>
+  <text class="font-content font-black content-fix">吾乐音乐教室是位于埼玉县川口市</text>
+  <text class="font-content font-black content-fix" style="top:9vh">面向华人的纯音乐教室.</text>
+
+  <text class="font-title font-black title-fix" style="top:13vh">地址</text>
+  <text class="font-content font-black content-fix" style="top:18.5vh">埼玉川口市本町1-16-4</text>
+  <text class="font-content font-black content-fix" style="top:20.5vh">川口サニーコーポ301室</text>
   <image class="home-neko" src="../../images/neko.png"></image>
 </view>
 

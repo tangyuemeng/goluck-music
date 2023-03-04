@@ -1,4 +1,6 @@
 // pages/book/book.js
+const app = getApp()
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -57,6 +59,86 @@ Page({
       arr:arr
     })
   },
+
+  async tabSelect(e) {
+    var classlist
+    var xqj = String(e.currentTarget.dataset.id)
+    console.log(xqj)
+    let result = await db.collection('class').where({xqj:xqj}).get()
+    classlist = result.data
+    console.log(classlist)
+    this.setData({
+      classlist : classlist
+    })
+  },
+
+  async openAppointment(e) {
+    let date = this.data.date
+      let result = await db.collection('user').get()
+      let num = result.data[0].num
+      if (num > 0 || app.globalData.cardtype === "受け放題"){
+      let classlog = await db.collection('classlog').where({
+        classid:e.currentTarget.dataset.id,
+        userID:app.globalData.userID
+      }).get()
+
+      if (classlog.data.length == 0) {
+        wx.showModal({
+          title:"确定预约吗？",
+          confirmText: "确定",
+          cancelText: "取消",
+          success: function (res) {
+            if (res.confirm) {
+              wx.showToast({
+                title: '预约成功',
+              })
+              if (app.globalData.cardtype != "受け放題"){
+              db.collection('User').where({
+              }).update({
+                data: {
+                  num: _.inc(-1)
+                },
+              })
+            }
+              db.collection('classlog').add({ 
+                data : {
+                "classid": e.currentTarget.dataset.id,
+                "userID" : app.globalData.userID,
+                "time":e.currentTarget.dataset.time,
+                "classname":e.currentTarget.dataset.classname,
+                "teacher":e.currentTarget.dataset.teacher,
+                "date":date,
+              }
+            })
+            } 
+          }
+        })
+      }
+      else{
+      wx.showToast({
+        title: '该课程已预约',
+        icon : 'error'
+       })
+      }
+    }
+    else{
+      wx.showToast({
+        title: '当月次数已用完',
+        icon : 'error',
+        duration : 1000,
+        success:function() {
+          setTimeout(function() {
+            //要延时执行的代码
+            wx.redirectTo({
+              url: '../index/index',
+            })
+          }, 1000) //延迟时间
+        },
+      })
+    }
+  
+
+},
 
   backhome(){
     wx.navigateBack({

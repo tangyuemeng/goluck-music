@@ -75,7 +75,7 @@
 
 .content-fix{
   position: absolute;
-  top: 6vh;
+  top: 6.5vh;
   right: 2vh;
 }
 
