@@ -1,0 +1,17 @@
+<view class="base-bar">
+  <text class="font-title font-black teacherinfo-title">教室简介</text>
+  <scroll-view scroll-x="true" class="bar-list">
+    <image class="item-img" src="{{item.url}}" wx:for="{{list}}"></image>
+  </scroll-view>
+
+  <text class="font-black font-content item-title">吾乐音乐教室是位于埼玉县川口市，面向华人的纯音乐教室。
+现主要分为两大模式。1。针对来日艺考生的留学辅导。其中包括：专业课指导，小论文指导，面试指导，出愿辅导，引荐教授等课程。2.面向零基础学员的业余兴趣辅导。年龄不限，自幼儿至老年人皆可辅导。
+教师老师皆为日本各大音乐院校毕业的修士及以上学历，且拥有丰富的升学辅导和教学经历，多次辅导学生升学成功及比赛获奖。在教学上，结合中日教学优点，保持轻松学习的基础上，对基本功的学习也绝不松懈。与学生及家长的关系融洽，教学氛围轻松有趣。</text>
+  <view class="font-black font-content item-content">教室地址：埼玉县川口市本町1-16-4 川口サニーコーポ301室
+微信号：GOLUCKMUSIC
+ 邮箱：goluckmusic0604@gmail.com</view>
+
+
+</view>
+
+<image class="book-back" src="../../images/back.svg" bindtap="backhome"></image>

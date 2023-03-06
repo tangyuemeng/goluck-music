@@ -4,10 +4,10 @@
 </view>
 
 
-<view class="goluck-block-white home-block">
+<view class="goluck-block-white home-block" bindtap="navi_info">
   <text class="font-title font-black title-fix">课程介绍</text>
   <text class="font-content font-black content-fix">吾乐音乐教室是位于埼玉县川口市</text>
-  <text class="font-content font-black content-fix" style="top:9vh">面向华人的纯音乐教室.</text>
+  <text class="font-content font-black content-fix" style="top:8vh">面向华人的纯音乐教室.</text>
 
   <text class="font-title font-black title-fix" style="top:13vh">地址</text>
   <text class="font-content font-black content-fix" style="top:18.5vh">埼玉川口市本町1-16-4</text>
@@ -25,7 +25,7 @@
   <image class="home-book" src="../../images/teacher.png"></image>
 </view>
 
-<view class="goluck-block-black block-bottom">
+<view class="goluck-block-black block-bottom" bindtap="navi_trail">
   <text class="font-title font-white" style="position: absolute; top: 1.5vh; left: 6vw;">体验</text>
   <text class="font-title font-white" style="position: absolute; top: 5.5vh; left: 6vw;">课程</text>
   <image class="home-arrow" src="../../images/arrow.png"></image>

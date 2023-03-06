@@ -20,9 +20,9 @@
       <text class="font-content font-white bar-time">{{item.time}}</text>
       <text class="font-content font-white bar-teacher">{{item.teacher}}</text>
       <view class="btn-white bar-btn">
-        <text class="font-content font-btn" wx:if="{{isbook}}">预约</text>
+        <text class="font-content font-btn" wx:if="{{!isbook}}" bindtap="openAppointment">预约</text>
       </view>
-      <view class="btn-white bar-btn" wx:if="{{!isbook}}">
+      <view class="btn-white bar-btn" wx:if="{{isbook}}">
         <text class="font-content font-btn" style="left: 4vw;">已满员</text>
       </view>
     </view>

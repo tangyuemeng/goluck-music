@@ -1,6 +1,7 @@
 // pages/book/book.js
 const app = getApp()
 const db = wx.cloud.database()
+const _ = db.command
 Page({
 
   /**
@@ -15,7 +16,10 @@ Page({
    */
   onLoad(options) {
     this.calculateWeek()
-
+    var isprivate = app.globalData.classtype ? app.globalData.classtype : "group"
+    this.setData({
+      isprivate:isprivate
+    })
   },
 
   dealTime: function (num) {     // num：未来天数
@@ -60,12 +64,13 @@ Page({
     })
   },
 
-  async tabSelect(e) {
+  async tabSelectprivate(e) {
     var classlist
     var xqj = String(e.currentTarget.dataset.id)
-    console.log(xqj)
+    let cacheresult = await db.collection('classlog').get()
     let result = await db.collection('class').where({xqj:xqj}).get()
     classlist = result.data
+
     console.log(classlist)
     this.setData({
       classlist : classlist
@@ -93,7 +98,7 @@ Page({
                 title: '预约成功',
               })
               if (app.globalData.cardtype != "受け放題"){
-              db.collection('User').where({
+              db.collection('user').where({
               }).update({
                 data: {
                   num: _.inc(-1)
@@ -104,6 +109,7 @@ Page({
                 data : {
                 "classid": e.currentTarget.dataset.id,
                 "userID" : app.globalData.userID,
+                "classtype" : app.globalData.classtype,
                 "time":e.currentTarget.dataset.time,
                 "classname":e.currentTarget.dataset.classname,
                 "teacher":e.currentTarget.dataset.teacher,

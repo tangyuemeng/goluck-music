@@ -1,5 +1,17 @@
 <text class="font-title font-black teacherinfo-title">教员介绍</text>
 
-<view class="goluck-block-black base-bar"></view>
+<scroll-view scroll-x="true" class="base-bar">
+  <scroll-view scroll-y="true" class=" bar-list" wx:for="{{list}}">
+    <image class="item-img" src="{{item.url}}"></image>
+    <text class="font-black font-subtitle item-title">{{item.title}}</text>
+    <view class="font-black font-content item-content">{{item.content}}</view>
+  </scroll-view>
+
+
+
+
+</scroll-view>
+
+<image class="book-back" src="../../images/back.svg" bindtap="backhome"></image>
 
 

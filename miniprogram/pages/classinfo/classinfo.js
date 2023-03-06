@@ -1,5 +1,6 @@
-// pages/user/user.js
+// pages/classinfo/classinfo.js
 const app = getApp()
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -12,12 +13,18 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
+  async onLoad(options) {
+    let result = await  db.collection('classinfo').get()
+    let list = result.data
+    console.log(list)
     this.setData({
-      userID:  app.globalData.userID,
-      isVIP:  app.globalData.isVIP,
-      cardtype:  app.globalData.cardtype,
-      num:  app.globalData.num,
+      list:list
+    })
+
+  },
+  backhome(){
+    wx.navigateBack({
+      delta:1
     })
   },
 
@@ -68,29 +75,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-
-  navi_mybook(){
-    wx.navigateTo({
-      url: '../mybook/mybook',
-    })
-  },
-
-  navi_teacherinfo(){
-    wx.navigateTo({
-      url: '../teacherinfo/teacherinfo',
-    })
-  },
-
-  navi_classinfo(){
-    wx.navigateTo({
-      url: '../classinfo/classinfo',
-    })
-  },
-
-  backhome(){
-    wx.navigateBack({
-      delta:1
-    })
   }
 })

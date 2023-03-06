@@ -11,8 +11,11 @@
   <image class="user-vip" src="../../images/vip.png"></image>
   <text class="font-subtitle font-white user-cardtype" wx:if="{{isVIP}}">{{cardtype}}</text>
   <text class="font-subtitle font-white user-cardtype" wx:if="{{!isVIP}}">会员已过期,请续费</text>
-  <text class="font-content font-white user-count" wx:if="{{isVIP}}">{{num}}</text>
+  <text class="font-content font-white user-count" wx:if="{{isVIP}}">剩余次数: {{num}}</text>
+  <text class="font-content font-white user-count" wx:if="{{!isVIP}}">点击咨询客服</text>
 </view>
+
+<button class="service-btn" style="width:80vw; height: 10vh; top: 32vh; background-color: transparent;" formType="submit" hoverClass="none" openType="contact" ></button>
 
 
 <view class="goluck-block-white-untap user-card">
@@ -27,7 +30,7 @@
     <text class="font-white font-subtitle font-card">教员介绍</text>
   </view>
 
-  <view class="goluck-block-black user-info" style="border-radius: 20px 55px 0px 20px;">
+  <view class="goluck-block-black user-info" style="border-radius: 20px 55px 0px 20px;" bindtap="navi_classinfo">
     <view class="bar-circle"></view>
     <text class="font-white font-subtitle font-card">教室信息</text>
   </view>
