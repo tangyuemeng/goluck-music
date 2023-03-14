@@ -22,20 +22,20 @@
 
 .bar-title{
   position: absolute;
-  top: 0.5vh;
-  left: 2vw;
+  top: 1vh;
+  left: 4vw;
 }
 
 .bar-time{
   position: absolute;
-  top: 4vh;
-  left: 2vw;
+  top: 4.5vh;
+  left: 4vw;
 }
 
 .bar-teacher{
   position: absolute;
   bottom: 0.5vh;
-  left: 2vw;
+  left: 4vw;
 }
 
 .cancel-btn{

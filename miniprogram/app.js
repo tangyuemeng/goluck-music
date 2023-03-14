@@ -9,6 +9,7 @@ App({
     classtype:null,
     name:null,
     islogin:false,
+    isTrail:false,
 } , 
   onLaunch: function () {
     if (!wx.cloud) {

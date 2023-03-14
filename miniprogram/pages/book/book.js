@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    date:null
   },
 
   /**
@@ -64,21 +64,33 @@ Page({
     })
   },
 
-  async tabSelectprivate(e) {
+  async tabSelect(e) {
     var classlist
     var xqj = String(e.currentTarget.dataset.id)
+    this.data.date = String(e.currentTarget.dataset.date)
+    if (app.globalData.isTrail){
     let cacheresult = await db.collection('classlog').get()
-    let result = await db.collection('class').where({xqj:xqj}).get()
+    let result = await db.collection('class-trail').where({xqj:xqj}).get()
     classlist = result.data
-
     console.log(classlist)
     this.setData({
       classlist : classlist
     })
+  }
+  else{
+    let cacheresult = await db.collection('classlog').get()
+    let result = await db.collection('class').where({xqj:xqj}).get()
+    classlist = result.data
+    console.log(classlist)
+    this.setData({
+      classlist : classlist
+    })
+  }
   },
 
   async openAppointment(e) {
-    let date = this.data.date
+     let date = this.data.date
+     console.log(date)
       let result = await db.collection('user').get()
       let num = result.data[0].num
       if (num > 0 || app.globalData.cardtype === "受け放題"){
