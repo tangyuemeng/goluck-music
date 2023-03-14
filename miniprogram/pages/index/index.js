@@ -56,12 +56,14 @@ Page({
 
 
   navi_book(){
+    app.globalData.isTrail = false
     wx.navigateTo({
       url: '../book/book',
     })
   },
 
   navi_trail(){
+    app.globalData.isTrail = true
     wx.navigateTo({
       url: '../book/book',
     })
