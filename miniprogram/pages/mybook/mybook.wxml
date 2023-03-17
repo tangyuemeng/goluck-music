@@ -6,6 +6,7 @@
     <text class="font-subtitle font-black bar-title">{{item.classname}}</text>
     <text class="font-content font-black bar-teacher">{{item.teacher}}</text>
       <text class="font-content font-black bar-time">{{item.date}}</text>
+      <text class="font-content font-black bar-time" style="left:15vw">{{item.time}}</text>
       <view class="cancel-btn">
 
         <text class="font-white font-subtitle font-cancel" bindtap="cancelClass" data-classid="{{item.classid}}">取消</text>
