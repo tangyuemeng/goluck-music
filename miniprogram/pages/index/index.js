@@ -45,8 +45,16 @@ Page({
   },
 
   async onReady(){
-    wx.showToast({
-      title: '12312',
+    let result= await db.collection('user').get()
+    let data= await db.collection('pianoinfo').get()
+    let info = data.data[0].info
+    let pianonum = result.data[0].pianonum
+    if (pianonum > 0){
+      app.globalData.showmodel = true
+    }
+    this.setData({
+      showmodel : app.globalData.showmodel,
+      info : info
     })
   },
 
@@ -61,6 +69,13 @@ Page({
     }
   },
 
+  hidemodel(){
+    app.globalData.showmodel = false
+  
+    this.setData({
+      showmodel : app.globalData.showmodel
+    })
+  },
 
   navi_book(){
     app.globalData.isTrail = false

@@ -35,6 +35,10 @@
   </view>
 </view>
 
-<view class="model">
-  <view class="goluck-block-black black-model"> </view>
+<view class="model-bar" wx:if="{{showmodel}}">
+  <view class="model"></view>
+  <view class="goluck-block-black black-model"> 
+    <view class="font-subtitle font-white model-text">{{info}}</view>
+  </view>
+  <view class="goluck-block-white model-btn font-black font-subtitle" bindtap="hidemodel">OK</view>
 </view>

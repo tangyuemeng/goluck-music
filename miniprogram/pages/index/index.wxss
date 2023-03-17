@@ -67,12 +67,13 @@
   top: 8vh;
 }
 
-/* .model{
+.model{
   position: absolute;
   width: 100vw;
   height: 100vh;
   background-color: #2b2b2b;
   opacity: 0.5;
+  text-align: center;
 }
 
 .black-model{
@@ -80,8 +81,24 @@
   width: 90vw;
   height: 30vh;
   left: 5vw;
-  top: 10vh;
-} */
+  top: 30vh;
+  opacity: 1;
+}
+
+.model-text{
+  margin-top: 2vh;
+  text-align: center;
+}
+
+.model-btn{
+  position: absolute;
+  width: 30vw;
+  height: 6vh;
+  top: 51vh;
+  left: 35vw;
+  text-align: center;
+  padding-top: 1vh;
+}
 
 .title-fix{
   position: absolute;
