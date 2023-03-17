@@ -19,6 +19,7 @@ Page({
     this.setData({
       list : list
     })
+
     console.log(list)
   },
 
@@ -61,6 +62,7 @@ Page({
     }
   }
 })
+
   },
 
   backhome(){

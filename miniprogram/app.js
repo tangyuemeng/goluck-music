@@ -11,6 +11,7 @@ App({
     islogin:false,
     isTrail:false,
     pianonum:0,
+
 } , 
   onLaunch: function () {
     if (!wx.cloud) {
