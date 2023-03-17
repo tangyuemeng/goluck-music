@@ -61,6 +61,9 @@ Page({
   },
 
   async tabSelect(e) {
+    this.setData({
+      showloading:true
+    })
     var classlist
     var xqj = String(e.currentTarget.dataset.id)
     this.data.date = String(e.currentTarget.dataset.date)
@@ -70,7 +73,8 @@ Page({
     classlist = result.data
     console.log(classlist)
     this.setData({
-      classlist : classlist
+      classlist : classlist,
+      showloading:false
     })
   }
   else{
@@ -79,13 +83,13 @@ Page({
     classlist = result.data
     console.log(classlist)
     this.setData({
-      classlist : classlist
+      classlist : classlist,
+      showloading:false
     })
   }
   },
 
   async openAppointment(e) {
-
     let result = await db.collection('user').get()
     let num = result.data[0].num
      let date = this.data.date
@@ -179,7 +183,7 @@ async openTrail(e) {
           } 
         }
       })
-
+      
   }
   else{
     wx.showToast({
@@ -199,7 +203,13 @@ async openTrail(e) {
 },
 
   async checkClasstype(e){
+    this.setData({
+      showloading:true
+    })
     if (app.globalData.isTrail){
+      this.setData({
+        showloading:false
+      })
       this.openTrail(e)
     }
     else{
@@ -211,9 +221,15 @@ async openTrail(e) {
       let logs = log.data
       if (classtype === "private"){
         if (logs.length == 0){
+          this.setData({
+            showloading:false
+          })
           this.openAppointment(e)
         }
         else{
+          this.setData({
+            showloading:false
+          })
           wx.showToast({
             title: '人数已满',
             icon : 'error'
@@ -221,6 +237,9 @@ async openTrail(e) {
         }
       }
       else{
+        this.setData({
+          showloading:false
+        })
         if (logs[0].classtype === "private"){
           wx.showToast({
             title: '人数已满',
@@ -228,6 +247,9 @@ async openTrail(e) {
           })
         }
         else{
+          this.setData({
+            showloading:false
+          })
           this.openAppointment(e)
         }
       }
