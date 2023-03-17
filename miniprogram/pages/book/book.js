@@ -90,7 +90,6 @@ Page({
     let num = result.data[0].num
      let date = this.data.date
      console.log(date)
-
       if (num > 0 || app.globalData.cardtype === "受け放題"){
       let classlog = await db.collection('classlog').where({
         classid:e.currentTarget.dataset.id,

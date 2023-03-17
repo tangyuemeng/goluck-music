@@ -1,5 +1,6 @@
-// pages/user/user.js
 const app = getApp()
+const db = wx.cloud.database()
+const _ = db.command
 Page({
 
   /**
@@ -12,12 +13,14 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
+  async onLoad(options) {
+    let result = await db.collection('user').get()
+    let num = result.data[0].num
     this.setData({
       userID:  app.globalData.userID,
       isVIP:  app.globalData.isVIP,
       cardtype:  app.globalData.cardtype,
-      num:  app.globalData.num,
+      num:  num,
       pianonum:app.globalData.pianonum
     })
   },

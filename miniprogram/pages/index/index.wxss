@@ -67,7 +67,7 @@
   top: 8vh;
 }
 
-.model{
+/* .model{
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -81,7 +81,7 @@
   height: 30vh;
   left: 5vw;
   top: 10vh;
-}
+} */
 
 .title-fix{
   position: absolute;
