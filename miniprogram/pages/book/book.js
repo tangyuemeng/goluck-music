@@ -149,10 +149,6 @@ async openTrail(e) {
   let trailnum = result.data[0].trailnum
    let date = this.data.date
     if (trailnum > 0){
-    let traillog = await db.collection('traillog').where({
-      classid:e.currentTarget.dataset.id,
-      userID:app.globalData.userID
-    }).get()
       wx.showModal({
         title:"确定预约吗？",
         confirmText: "确定",
