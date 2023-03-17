@@ -67,6 +67,22 @@
   top: 8vh;
 }
 
+.model{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2b2b2b;
+  opacity: 0.5;
+}
+
+.black-model{
+  position: absolute;
+  width: 90vw;
+  height: 30vh;
+  left: 5vw;
+  top: 10vh;
+}
+
 .title-fix{
   position: absolute;
   top: 0vh;

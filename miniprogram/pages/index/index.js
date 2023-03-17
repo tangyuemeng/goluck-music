@@ -44,6 +44,12 @@ Page({
     }
   },
 
+  async onReady(){
+    wx.showToast({
+      title: '12312',
+    })
+  },
+
   changestringlength (e){
     var result 
     if (e.length === 1){
