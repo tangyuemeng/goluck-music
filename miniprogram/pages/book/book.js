@@ -16,10 +16,6 @@ Page({
    */
   onLoad(options) {
     this.calculateWeek()
-    var isprivate = app.globalData.classtype ? app.globalData.classtype : "group"
-    this.setData({
-      isprivate:isprivate
-    })
   },
 
   dealTime: function (num) {     // num：未来天数
@@ -89,17 +85,15 @@ Page({
   },
 
   async openAppointment(e) {
+    let result = await db.collection('user').get()
+    let num = result.data[0].num
      let date = this.data.date
      console.log(date)
-      let result = await db.collection('user').get()
-      let num = result.data[0].num
       if (num > 0 || app.globalData.cardtype === "受け放題"){
       let classlog = await db.collection('classlog').where({
         classid:e.currentTarget.dataset.id,
         userID:app.globalData.userID
       }).get()
-
-      if (classlog.data.length == 0) {
         wx.showModal({
           title:"确定预约吗？",
           confirmText: "确定",
@@ -131,13 +125,7 @@ Page({
             } 
           }
         })
-      }
-      else{
-      wx.showToast({
-        title: '该课程已预约',
-        icon : 'error'
-       })
-      }
+
     }
     else{
       wx.showToast({
@@ -154,9 +142,100 @@ Page({
         },
       })
     }
-  
-
 },
+
+async openTrail(e) {
+  let result = await db.collection('user').get()
+  let trailnum = result.data[0].trailnum
+   let date = this.data.date
+    if (trailnum > 0){
+    let traillog = await db.collection('traillog').where({
+      classid:e.currentTarget.dataset.id,
+      userID:app.globalData.userID
+    }).get()
+      wx.showModal({
+        title:"确定预约吗？",
+        confirmText: "确定",
+        cancelText: "取消",
+        success: function (res) {
+          if (res.confirm) {
+            wx.showToast({
+              title: '预约成功',
+            })
+            db.collection('user').where({
+            }).update({
+              data: {
+                trailnum: _.inc(-1)
+              },
+            })
+            db.collection('traillog').add({ 
+              data : {
+              "classid": e.currentTarget.dataset.id,
+              "userID" : app.globalData.userID,
+              "classtype" : app.globalData.classtype,
+              "time":e.currentTarget.dataset.time,
+              "classname":e.currentTarget.dataset.classname,
+              "teacher":e.currentTarget.dataset.teacher,
+              "date":date,
+            }
+          })
+          } 
+        }
+      })
+
+  }
+  else{
+    wx.showToast({
+      title: '体验次数已用完',
+      icon : 'error',
+      duration : 1000,
+      success:function() {
+        setTimeout(function() {
+          //要延时执行的代码
+          wx.redirectTo({
+            url: '../index/index',
+          })
+        }, 1000) //延迟时间
+      },
+    })
+  }
+},
+
+  async checkClasstype(e){
+    if (app.globalData.isTrail){
+      this.openTrail(e)
+    }
+    else{
+      let result = await db.collection('user').get()
+      let log = await db.collection('classlog').where({
+        classid:e.currentTarget.dataset.id,
+      }).get()
+      let classtype = result.data[0].classtype
+      let logs = log.data
+      if (classtype === "private"){
+        if (logs.length == 0){
+          this.openAppointment(e)
+        }
+        else{
+          wx.showToast({
+            title: '人数已满',
+            icon : 'error'
+          })
+        }
+      }
+      else{
+        if (logs[0].classtype === "private"){
+          wx.showToast({
+            title: '人数已满',
+            icon : 'error'
+          })
+        }
+        else{
+          this.openAppointment(e)
+        }
+      }
+    }
+  },
 
   backhome(){
     wx.navigateBack({

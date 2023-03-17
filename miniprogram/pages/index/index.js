@@ -34,6 +34,7 @@ Page({
     app.globalData.classtype = result.data[0].classtype ? result.data[0].classtype : "新规"
     app.globalData.num = result.data[0].num ? result.data[0].num : 0
     app.globalData.allowedNum = result.data[0].allowedNum
+    app.globalData.pianonum = result.data[0].pianonum
     app.globalData.name = result.data[0].name ? result.data[0].name : "新规会员"
     console.log(app.globalData.userID)
     console.log(app.globalData.vip)

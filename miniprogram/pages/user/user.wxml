@@ -12,6 +12,7 @@
   <text class="font-subtitle font-white user-cardtype" wx:if="{{isVIP}}">{{cardtype}}</text>
   <text class="font-subtitle font-white user-cardtype" wx:if="{{!isVIP}}">会员已过期,请续费</text>
   <text class="font-content font-white user-count" wx:if="{{isVIP}}">剩余次数: {{num}}</text>
+  <text class="font-content font-white user-count" style="left: 52vw;" wx:if="{{pianonum}}">钢琴卡: {{pianonum}}</text>
   <text class="font-content font-white user-count" wx:if="{{!isVIP}}">点击咨询客服</text>
 </view>
 

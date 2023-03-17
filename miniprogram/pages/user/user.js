@@ -18,6 +18,7 @@ Page({
       isVIP:  app.globalData.isVIP,
       cardtype:  app.globalData.cardtype,
       num:  app.globalData.num,
+      pianonum:app.globalData.pianonum
     })
   },
 
