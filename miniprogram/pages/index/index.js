@@ -2,7 +2,7 @@
 const app = getApp()
 const db = wx.cloud.database()
 const { envList } = require('../../envList.js');
-
+const _ = db.command
 Page({
   data: {
 
@@ -36,11 +36,7 @@ Page({
     app.globalData.allowedNum = result.data[0].allowedNum
     app.globalData.pianonum = result.data[0].pianonum
     app.globalData.name = result.data[0].name ? result.data[0].name : "新规会员"
-    console.log(app.globalData.userID)
-    console.log(app.globalData.vip)
-    console.log(app.globalData.cardtype)
-    console.log(app.globalData.num)
-    console.log(app.globalData.nickName)
+
     }
   },
 
@@ -69,9 +65,37 @@ Page({
     }
   },
 
-  hidemodel(){
+  async hidemodel(){
+    var date = new Date()
+    let result = await db.collection('pianolog').where({
+      userID:app.globalData.userID
+    }).get()
+    if(result.data.length === 0){
+      db.collection('user').where({
+        userID:app.globalData.userID
+      }).update({
+        data: {
+          pianonum: _.inc(-1)
+        },
+      })
+      db.collection('pianolog').add({
+        data:{
+          "userID" : app.globalData.userID,
+          "name" : app.globalData.name,
+          "date" : date,
+          "classtype" : app.globalData.classtype,
+          "pianonum" : app.globalData.pianonum,
+        }
+      })
+    }
     app.globalData.showmodel = false
-  
+    this.setData({
+      showmodel : app.globalData.showmodel
+    })
+  },
+
+  hide1(){
+    app.globalData.showmodel = false
     this.setData({
       showmodel : app.globalData.showmodel
     })
@@ -79,9 +103,17 @@ Page({
 
   navi_book(){
     app.globalData.isTrail = false
+    if (app.globalData.isVIP){
     wx.navigateTo({
       url: '../book/book',
     })
+  }
+  else{
+    wx.showToast({
+      title: '会员卡已过期',
+      icon:'error'
+    })
+  }
   },
 
   navi_trail(){

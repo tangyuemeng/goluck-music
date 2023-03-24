@@ -36,9 +36,13 @@
 </view>
 
 <view class="model-bar" wx:if="{{showmodel}}">
-  <view class="model"></view>
+  <view class="model" bindtap="hide1"></view>
   <view class="goluck-block-black black-model"> 
     <view class="font-subtitle font-white model-text">{{info}}</view>
   </view>
-  <view class="goluck-block-white model-btn font-black font-subtitle" bindtap="hidemodel">OK</view>
+  <view class="goluck-block-white model-btn font-black font-subtitle" bindtap="hidemodel">上课</view>
+  <view class="goluck-block-white model-btn font-black font-subtitle" style="left: 55vw;">请假</view>
+  <button class="service-btn" style="width:30vw; height: 7vh; top: 51vh; left: 20vw; background-color: transparent;" formType="submit" hoverClass="none" openType="contact" ></button>
 </view>
+
+

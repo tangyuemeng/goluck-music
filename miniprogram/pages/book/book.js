@@ -92,7 +92,8 @@ Page({
   async openAppointment(e) {
     let result = await db.collection('user').get()
     let num = result.data[0].num
-     let date = this.data.date
+    let name = result.data[0].name
+    let date = this.data.date
      console.log(date)
       if (num > 0 || app.globalData.cardtype === "受け放題"){
       let classlog = await db.collection('classlog').where({
@@ -125,6 +126,7 @@ Page({
                 "classname":e.currentTarget.dataset.classname,
                 "teacher":e.currentTarget.dataset.teacher,
                 "date":date,
+                "name":name,
               }
             })
             } 

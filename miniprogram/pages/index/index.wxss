@@ -95,7 +95,7 @@
   width: 30vw;
   height: 6vh;
   top: 51vh;
-  left: 35vw;
+  left: 15vw;
   text-align: center;
   padding-top: 1vh;
 }

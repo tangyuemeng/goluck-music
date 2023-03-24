@@ -16,12 +16,13 @@ Page({
   async onLoad(options) {
     let result = await db.collection('user').get()
     let num = result.data[0].num
+    let pianonum = result.data[0].pianonum
     this.setData({
       userID:  app.globalData.userID,
       isVIP:  app.globalData.isVIP,
       cardtype:  app.globalData.cardtype,
       num:  num,
-      pianonum:app.globalData.pianonum
+      pianonum:pianonum
     })
   },
 
