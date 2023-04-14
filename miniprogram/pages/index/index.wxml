@@ -37,12 +37,32 @@
 
 <view class="model-bar" wx:if="{{showmodel}}">
   <view class="model" bindtap="hide1"></view>
-  <view class="goluck-block-black black-model"> 
+  <view class="goluck-block-black-untap black-model"> 
     <view class="font-subtitle font-white model-text">{{info}}</view>
+    <view class="font-subtitle font-white model-text">{{content}}</view>
   </view>
-  <view class="goluck-block-white model-btn font-black font-subtitle" bindtap="hidemodel">上课</view>
-  <view class="goluck-block-white model-btn font-black font-subtitle" style="left: 55vw;">请假</view>
-  <button class="service-btn" style="width:30vw; height: 7vh; top: 51vh; left: 20vw; background-color: transparent;" formType="submit" hoverClass="none" openType="contact" ></button>
+  <view class="goluck-block-white model-btn font-black font-subtitle" bindtap="attend">上课</view>
+  <view class="goluck-block-white model-btn font-black font-subtitle" style="left: 55vw;"  bindtap="abend">请假</view>
+</view>
+
+<view class="model-bar" wx:if="{{showbeforemodel}}">
+  <view class="model" bindtap="hide1"></view>
+  <view class="goluck-block-black-untap black-model"> 
+    <view class="font-subtitle font-white model-text">请输入上课日期</view>
+    <input class="goluck-input font-subtitle font-black" bindinput="bindKeyInput" auto-focus placeholder="例：1月1日"/>
+  </view>
+  <view class="goluck-block-white model-btn font-black font-subtitle" bindtap="hide1">取消</view>
+  <view class="goluck-block-white model-btn font-black font-subtitle" style="left: 55vw;"  bindtap="attendclass">上课</view>
+</view>
+
+<view class="model-bar" wx:if="{{shownextmodel}}">
+  <view class="model" bindtap="hide1"></view>
+  <view class="goluck-block-black-untap black-model"> 
+    <view class="font-subtitle font-white model-text">请输入请假日期</view>
+    <input class="goluck-input font-subtitle font-black" bindinput="bindKeyInput" auto-focus placeholder="例：1月1日"/>
+  </view>
+  <view class="goluck-block-white model-btn font-black font-subtitle" bindtap="hide1">取消</view>
+  <view class="goluck-block-white model-btn font-black font-subtitle" style="left: 55vw;"  bindtap="abendclass">请假</view>
 </view>
 
 

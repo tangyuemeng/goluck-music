@@ -242,17 +242,25 @@ async openTrail(e) {
         this.setData({
           showloading:false
         })
-        if (logs[0].classtype === "private"){
-          wx.showToast({
-            title: '人数已满',
-            icon : 'error'
-          })
-        }
-        else{
+        if (logs.length === 0){
           this.setData({
             showloading:false
           })
           this.openAppointment(e)
+        }
+        else{
+          if (logs[0].classtype === "private"){
+            wx.showToast({
+              title: '人数已满',
+              icon : 'error'
+            })
+          }
+          else{
+            this.setData({
+              showloading:false
+            })
+            this.openAppointment(e)
+          }
         }
       }
     }

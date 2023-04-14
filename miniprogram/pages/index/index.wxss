@@ -76,6 +76,15 @@
   text-align: center;
 }
 
+.goluck-input{
+  background-color: #f5f5f5;
+  width: 70vw;
+  height: 5vh;
+  margin-left: 10vw;
+  margin-top: 3vh;
+  border-radius: 20px;
+}
+
 .black-model{
   position: absolute;
   width: 90vw;
