@@ -21,10 +21,10 @@
       <text class="font-content font-white bar-teacher">{{item.teacher}}</text>
       <view class="btn-white bar-btn">
 
-        <text class="font-content font-btn" wx:if="{{!isbook}}" data-id="{{item.classid}}" data-classname="{{item.classname}}" data-time="{{item.time}}" data-teacher="{{item.teacher}}" bindtap="checkClasstype">预约</text>
+        <text class="font-content font-btn" wx:if="{{!item.isBook}}" data-id="{{item.classid}}" data-classname="{{item.classname}}" data-time="{{item.time}}" data-teacher="{{item.teacher}}" data-xqj="{{item.xqj}}" bindtap="checkClasstype">预约</text>
 
       </view>
-      <view class="btn-white bar-btn" wx:if="{{isbook}}">
+      <view class="btn-white bar-btn" wx:if="{{item.isBook}}">
         <text class="font-content font-btn" style="left: 4vw;">已满员</text>
       </view>
     </view>

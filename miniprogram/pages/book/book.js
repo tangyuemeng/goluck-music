@@ -65,6 +65,7 @@ Page({
       showloading:true
     })
     var classlist
+    var cache
     var xqj = String(e.currentTarget.dataset.id)
     this.data.date = String(e.currentTarget.dataset.date)
     if (app.globalData.isTrail){
@@ -78,10 +79,38 @@ Page({
     })
   }
   else{
-    let cacheresult = await db.collection('classlog').get()
+    let cacheresult = await db.collection('classlog').where({xqj:xqj}).get()
+    console.log(cacheresult.data)
     let result = await db.collection('class').where({xqj:xqj}).get()
     classlist = result.data
-    console.log(classlist)
+    cache = cacheresult.data
+    if (cache.length == 0){
+      for (var i in classlist){
+        classlist[i].isBook = false
+      }
+    }
+    for (var i in classlist){
+      var count = 0 
+      var classtype = ""
+      for (var key in cache){
+        if (classlist[i].classid == cache[key].classid){
+          count += 1
+          classtype = cache[key].classtype
+        }
+      }
+      if (app.globalData.classtype ==  "private"){
+        if (count > 0){
+          classlist[i].isBook = true
+        }
+      }
+      if (app.globalData.classtype ==  "group"){
+        if (count > 0){
+          if (classtype =="private" ){
+          classlist[i].isBook = true
+          }
+        }
+      }
+  }
     this.setData({
       classlist : classlist,
       showloading:false
@@ -127,6 +156,7 @@ Page({
                 "teacher":e.currentTarget.dataset.teacher,
                 "date":date,
                 "name":name,
+                "xqj":e.currentTarget.dataset.xqj,
               }
             })
             } 
